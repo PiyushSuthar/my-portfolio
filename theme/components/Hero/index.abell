@@ -1,0 +1,29 @@
+<AbellComponent>
+<template>
+    <div class="hero">
+		<div class="author">
+			<h1>Hi, I'm {{props.globalMeta.author.name}}</h1>
+			<p>{{props.globalMeta.author.about}}</p>
+			<div class="social">
+			    <a href="https://twitter.com/{{props.globalMeta.author.twitter}}?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-size="large" data-show-screen-name="false" data-show-count="true">Follow @{{props.globalMeta.author.twitter}}</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+				<a class="github-button" href="https://github.com/{{props.globalMeta.author.github}}" aria-label="Follow @{{props.globalMeta.author.github}} on GitHub">
+                    <img src="https://img.shields.io/github/followers/{{props.globalMeta.author.github}}?label=Follow&logo=github&style=for-the-badge"/>
+                </a>
+			</div>	
+		</div>
+		<div class="author-image">
+			<img src="{{props.globalMeta.author.image}}">
+		</div>
+	</div>
+</template>
+<style>
+  @media only screen and (min-width: 992px){    
+  .hero{
+      margin-top: 50px;
+  }
+  }
+</style>
+<script>
+  
+</script>
+</AbellComponent>

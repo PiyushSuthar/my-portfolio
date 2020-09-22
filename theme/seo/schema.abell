@@ -1,0 +1,21 @@
+<AbellComponent>
+<template>
+<script type="application/ld+json" inlined>
+{
+  "@context": "https://schema.org/",
+  "@type": "Person",
+  "name": "{{ props.globalMeta.name }}",
+  "url": "{{ props.globalMeta.domain }}",
+  "image": "{{ props.globalMeta.ogimage }}",
+  "sameAs": [
+    "{{ props.globalMeta.social.twitter }}",
+    "{{ props.globalMeta.social.facebook }}",
+    "{{ props.globalMeta.social.github }}",
+    "{{ props.globalMeta.social.instagram }}",
+    "{{ props.globalMeta.social.youtube }}"
+  ],
+  "jobTitle": "{{ props.globalMeta.jobTitle }}"  
+}
+</script>
+</template>
+</AbellComponent>

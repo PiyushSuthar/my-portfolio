@@ -1,0 +1,28 @@
+{{
+  const { globalMeta, contentArray, $root } = Abell;
+  
+  const InlinedCSS = require('./static-assets/styles/inlined.css.abell');
+  const SeoSchema = require("./seo/schema.abell")
+  const SeoHead = require("./seo/head.abell")
+  const Header = require("./components/Header/index.abell")
+  const Footer = require("./components/Footer/index.abell")
+  const Cards = require("./components/Cards/index.abell")
+  const Hero = require("./components/Hero/index.abell")
+}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <SeoHead props={globalMeta, $root} />
+	<link rel="stylesheet" type="text/css" href="{{ $root }}/static-assets/styles/main.css"/>
+	<link rel="stylesheet" type="text/css" href="{{ $root }}/static-assets/styles/custom.css"/>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"/>
+  <InlinedCSS />
+</head>
+<body>
+  <SeoSchema props={globalMeta, $root}/>
+  <Header props={siteName: globalMeta.siteName}/>
+    <Hero props={globalMeta}/>
+    <Cards props={articles: contentArray, title: "Articles"} />
+  <Footer/>  
+</body>
+</html>

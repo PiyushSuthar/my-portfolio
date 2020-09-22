@@ -1,0 +1,15 @@
+<AbellComponent>
+<template>
+    <footer class="footer-down">
+        <p>&copy; 2020 Piyush Suthar | <a href="tools.html">Tools</a></p>
+    </footer>
+  </div>
+    </div>
+</template>
+<style>
+
+</style>
+<script>
+  
+</script>
+</AbellComponent>

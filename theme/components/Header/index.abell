@@ -1,0 +1,123 @@
+<AbellComponent>
+<template>
+<div class="small-container">
+  		<nav class="nav">
+			<div class="nav-container">
+				<div class="title">
+					<a  href="/"><span class="logo">P</span><span class="hide-on-mobile">Piyush Suthar</span></a>
+				</div>
+				<div id="ham" class="hamburger"><i class="fas fa-bars"></i></div>
+				
+				<div id="nav-links" class="nav-links">
+					<a class="button" href="/">Home</a>
+					<a href="contact.html">Contact</a>
+					<a href="portfolio.html">Portfolio</a>
+				</div>
+			</div>
+		</nav>
+		
+    <div class="main">
+</template>
+<style>
+
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    width: 100%;
+    background: #fff;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+    display: block;
+}
+
+nav .title a {
+    display: flex;
+    align-items: center;
+    color: #333;
+    margin-right: 0;
+    font-weight: 600;
+    font-size: 1.1rem;
+    text-decoration: none;
+}
+
+nav .nav-container {
+    display: flex;
+    align-items: center;
+    min-height: 55px;
+    max-width: 800px;
+    margin: auto;
+    justify-content: space-between;
+    -webkit-transition: height .3s ease;
+    transition: height .3s ease;
+	flex-wrap: wrap;
+}
+@media (min-width: 850px) {
+    nav .nav-container {
+        min-height: 90px;
+    }
+}
+
+
+.nav-links a {
+    text-decoration: none;
+    margin: 10px;
+}
+
+.title a .logo {
+    background-color: #0366EE;
+    color: white;
+    border-radius: 50%;
+    font-size: 25px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    margin-right: 10px;
+    box-shadow: 3px 5px 20px rgba(0, 0, 0, .16);
+}
+.hamburger {
+    display: none;
+}
+
+  @media only screen and (max-width: 600px){
+	  .hamburger {
+        display: block;
+        text-align: right;
+        padding: 10px;
+        margin-top: 10px;
+        margin-right: 10px;
+        color: #0366EE;
+        cursor: pointer;
+        width: 0px auto;
+        height: 0px auto;
+    }
+	.nav-links {
+        display: none;
+        text-align: center;
+		flex-direction: column;
+		width: 100%;
+		
+    }
+    .nav .nav-container {
+        height: auto;
+    }
+  }
+
+  @keyframes displayMenu{
+	  from {
+		  transform: scale(0);
+	  }
+	  to{
+		  transform: scale(1);
+	  }
+  }
+</style>
+<script type="text/javascript">
+		const toggle = ele => (ele.style.display = (ele.style.display === 'flex') ? 'none' : 'flex');
+  			document.getElementById("ham").addEventListener("click", (e)=> {
+				  toggle(document.getElementById("nav-links"))
+			  })
+</script>
+</AbellComponent>

@@ -1,0 +1,16 @@
+<AbellComponent>
+<template>
+    <meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="google-site-verification" content="tYrrlSLOtVzFkfi8qp28L4TQ1GTgF4jBJI1zICbm0l0" />
+	<title>{{props.globalMeta.siteName}}</title>
+	<meta property="og:title" content="{{ props.globalMeta.siteName }}">
+	<meta property="og:site_name" content="{{ props.globalMeta.siteName }}">
+	<meta property="og:url" content="{{ props.globalMeta.domain }}">
+    <link rel="canonical" href="{{ props.globalMeta.domain }}"/>
+	<meta property="og:description" content="{{ props.globalMeta.description }}">
+	<meta property="og:type" content="website">
+	<meta property="og:image" content="{{ props.$root }}/images/author.jpg">
+</template>
+</AbellComponent>
