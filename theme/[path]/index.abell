@@ -1,9 +1,10 @@
 {{
-  const { globalMeta, meta, importContent, $root } = Abell;
+  const { globalMeta, meta, importContent, $root} = Abell;
 
   const InlinedCSS = require('../static-assets/styles/inlined.css.abell');
   const Header = require("../components/Header/index.abell")
   const Footer = require("../components/Footer/index.abell")
+  const ShareIt = require("../components/ShareCompo/index.abell")
   const SeoSchema = require("../seo/schema.abell")
   const SeoHead = require("../seo/head.abell")
 }}
@@ -11,19 +12,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <SeoHead props={globalMeta, $root} />
+  <SeoHead props={globalMeta, meta, $root} />
 	<link rel="stylesheet" type="text/css" href="{{ $root }}/static-assets/styles/main.css"/>
 	<link rel="stylesheet" type="text/css" href="{{ $root }}/static-assets/styles/custom.css"/>
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
   <InlinedCSS/>
 </head>
 <body>
-<Header props={siteName: globalMeta.siteName}/>
+<Header props={siteName: globalMeta.siteName, meta}/>
   <main>
     <div class="blog-container">
       <div class="content">
         {{ importContent(`${meta.$path}/index.md`) }}
       </div>
+    <ShareIt props={globalMeta, meta}/>
     </div>
     <hr/><br/><br/>
 

@@ -8,7 +8,7 @@
     </div>
     <div class="project">
     {{
-        props.articles.map(data => (/* html */`
+        props.articles.filter(post => post.type !== "page").map(data => (/* html */`
         <div class="card">
             <a href="${ data.$path }">
                 <div class="card-outer">

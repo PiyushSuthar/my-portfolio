@@ -20,7 +20,7 @@
 </head>
 <body>
   <SeoSchema props={globalMeta, $root}/>
-  <Header props={siteName: globalMeta.siteName}/>
+  <Header props={siteName: globalMeta.siteName, path:""}/>
     <Hero props={globalMeta}/>
     <Cards props={articles: contentArray, title: "Articles"} />
   <Footer/>  

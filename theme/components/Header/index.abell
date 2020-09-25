@@ -1,17 +1,33 @@
 <AbellComponent>
+{{
+    const HeaderLinks = require('../../headerlinks.json')
+    const pageName = () => {
+        if(props.path === "") return "Home"
+        if(props.meta.$path === "contact") return "Contact"
+        if(props.meta.$path === "about") return "About"
+        return "Home"
+    }
+}}
 <template>
 <div class="small-container">
-  		<nav class="nav">
+  		<nav id="navbar" class="nav">
 			<div class="nav-container">
 				<div class="title">
-					<a  href="/"><span class="logo">P</span><span class="hide-on-mobile">Piyush Suthar</span></a>
+					<a  href="/"><span class="logo">{{props.siteName.substr(0,1)}}</span><span class="hide-on-mobile">{{props.siteName}}</span></a>
 				</div>
 				<div id="ham" class="hamburger"><i class="fas fa-bars"></i></div>
 				
 				<div id="nav-links" class="nav-links">
-					<a class="button" href="/">Home</a>
-					<a href="contact.html">Contact</a>
-					<a href="portfolio.html">Portfolio</a>
+
+                    {{
+                        HeaderLinks.map((page, index)=> {
+                            if(pageName() === page.name) {
+                                return `<a class="button" href="${page.path}">${page.name}</a>`
+                            }else{
+                                return `<a href="${page.path}">${page.name}</a>`
+                            }
+                        })
+                    }}
 				</div>
 			</div>
 		</nav>
@@ -32,7 +48,9 @@ nav {
     transition: all .3s ease;
     display: block;
 }
-
+nav.box-shadowed {
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,0.15)
+}
 nav .title a {
     display: flex;
     align-items: center;
@@ -114,10 +132,19 @@ nav .nav-container {
 	  }
   }
 </style>
-<script type="text/javascript">
+<script>
 		const toggle = ele => (ele.style.display = (ele.style.display === 'flex') ? 'none' : 'flex');
   			document.getElementById("ham").addEventListener("click", (e)=> {
 				  toggle(document.getElementById("nav-links"))
 			  })
+    window.onscroll = ()=> {
+        if(scrollY !== 0){
+            const nav = document.getElementById("navbar")
+            nav.classList.add("box-shadowed")
+        }else {
+            const nav = document.getElementById("navbar")
+            nav.classList.remove("box-shadowed")
+        }
+    }
 </script>
 </AbellComponent>

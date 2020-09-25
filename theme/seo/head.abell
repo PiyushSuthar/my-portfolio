@@ -1,16 +1,37 @@
 <AbellComponent>
+{{
+	const title = props.meta ? props.meta.title + " - " + props.globalMeta.siteName : props.globalMeta.siteName
+	const description = props.meta ? props.meta.description : props.globalMeta.description
+	const url = props.meta ? props.globalMeta.domain+ "/" + props.meta.$path : props.globalMeta.domain
+	const ogType = props.meta ? "article" : "website"
+	const ogImage = props.globalMeta.domain + "/images/author.jpg"
+
+	const googleSiteVerifcation = props.globalMeta.googleSiteVerifcation
+}}
 <template>
     <meta charset="utf-8">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="google-site-verification" content="tYrrlSLOtVzFkfi8qp28L4TQ1GTgF4jBJI1zICbm0l0" />
-	<title>{{props.globalMeta.siteName}}</title>
-	<meta property="og:title" content="{{ props.globalMeta.siteName }}">
+	<!-- Google Site Verification-->
+	<meta name="google-site-verification" content="{{googleSiteVerifcation}}" />
+	<!-- Title -->
+	<title>{{title}}</title>
+	<meta name="title" content="{{title}}">
+	<meta name="description" content="{{ description }}">
+    <link rel="canonical" href="{{ url }}"/>
+	<!-- OPEN GRAPH Tags -->
+	<meta property="og:title" content="{{ title }}">
 	<meta property="og:site_name" content="{{ props.globalMeta.siteName }}">
-	<meta property="og:url" content="{{ props.globalMeta.domain }}">
-    <link rel="canonical" href="{{ props.globalMeta.domain }}"/>
-	<meta property="og:description" content="{{ props.globalMeta.description }}">
-	<meta property="og:type" content="website">
-	<meta property="og:image" content="{{ props.$root }}/images/author.jpg">
+	<meta property="og:url" content="{{ url }}">
+	<meta property="og:description" content="{{ description }}">
+	<meta property="og:type" content="{{ ogType }}">
+	<meta property="og:image" content="{{ ogImage }}">
+	<!-- Twitter Tags -->
+	<meta property="twitter:card" content="summary_large_image">
+	<meta property="twitter:url" content="{{ url }}">
+	<meta property="twitter:title" content="{{ title }}">
+	<meta property="twitter:description" content="{{ description }}">
+	<meta property="twitter:image" content="{{ ogImage }}">
+
 </template>
 </AbellComponent>
