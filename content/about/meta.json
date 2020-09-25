@@ -1,5 +1,10 @@
 {
     "type": "page",
     "title": "About",
-    "description": "Know something about me!"
+    "description": "Know something about me!",
+    "ctt": {
+        "text": "Hey! I just came across an amazing portfolio. Have a look!",
+        "url": "https://piyushsthr.netlify.app",
+        "username": "PiyushSthr"
+    }
 }
