@@ -6,7 +6,7 @@ module.exports = {
         siteName: 'Piyush Suthar',
         description: "My lovely Portfolio!",
         twitter: 'PiyushSthr',
-        domain: 'https://piyushsuthar.github.io',
+        domain: 'https://piyushsthr.netlify.app/',
         social: {
             facebook: "https://www.facebook.com/Piyushsthr",
             twitter: "https://twitter.com/piyushsthr",

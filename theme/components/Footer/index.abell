@@ -1,15 +1,10 @@
 <AbellComponent>
 <template>
     <footer class="footer-down">
-        <p>&copy; 2020 Piyush Suthar | <a href="tools.html">Tools</a></p>
+        <p>&copy; 2020 Piyush Suthar | Made using <a target="_blank" href="https://abelljs.org/">Abell js</a></p>
     </footer>
   </div>
     </div>
+    <script src="//instant.page/5.1.0" type="module" integrity="sha384-by67kQnR+pyfy8yWP4kPO12fHKRLHZPfEsiSXR8u2IKcTdxD805MGUXBzVPnkLHw"></script>
 </template>
-<style>
-
-</style>
-<script>
-  
-</script>
 </AbellComponent>
