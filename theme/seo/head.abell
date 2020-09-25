@@ -4,7 +4,7 @@
 	const description = props.meta ? props.meta.description : props.globalMeta.description
 	const url = props.meta ? props.globalMeta.domain+ "/" + props.meta.$path : props.globalMeta.domain
 	const ogType = props.meta ? "article" : "website"
-	const ogImage = props.globalMeta.domain + "/images/author.jpg"
+	const ogImage = props.globalMeta.seo.ogimage
 
 	const googleSiteVerifcation = props.globalMeta.googleSiteVerifcation
 }}

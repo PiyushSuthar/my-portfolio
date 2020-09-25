@@ -16,11 +16,11 @@ module.exports = {
         },
         jobTitle: "Developer",
         seo: {
-            ogimage: "https://raw.githubusercontent.com/PiyushSuthar/piyushsuthar.github.io/master/author.JPG",
+            ogimage: "https://cdn.statically.io/img/raw.githubusercontent.com/PiyushSuthar/piyushsuthar.github.io/master/author.JPG?w=300&h=300&quality=90&f=auto",
         },
         author: {
             name: 'Piyush',
-            image: "https://raw.githubusercontent.com/PiyushSuthar/piyushsuthar.github.io/master/author.JPG",
+            image: "https://cdn.statically.io/img/raw.githubusercontent.com/PiyushSuthar/piyushsuthar.github.io/master/author.JPG?w=300&h=300&quality=90&f=auto",
             about: `I am a developer, I love to design web and my goal is to become one of the best developers in the world. Currently, I'm an author and developer at <a target="_blank" href="https://Qdient.com">Qdient Developers</a>`,
             twitter: "piyushsthr",
             github: "piyushsuthar"
