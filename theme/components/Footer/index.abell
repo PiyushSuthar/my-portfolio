@@ -1,7 +1,7 @@
 <AbellComponent>
 <template>
     <footer class="footer-down">
-        <p>&copy; 2020 Piyush Suthar | Made using <a target="_blank" href="https://abelljs.org/">Abell js</a></p>
+        <p>&copy; 2020 Piyush Suthar | Made using <a target="_blank" href="https://abelljs.org/">Abell js</a> | <a href="https://github.com/piyushsuthar/my-portfolio" target="_blank">Github</a></p>
     </footer>
   </div>
     </div>
