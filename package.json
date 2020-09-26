@@ -13,6 +13,7 @@
   "license": "MIT",
   "dependencies": {},
   "devDependencies": {
-    "abell": "^0.6.2"
+    "abell": "^0.6.2",
+    "abell-html-minifier": "^1.0.2"
   }
 }

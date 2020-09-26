@@ -1,4 +1,5 @@
 module.exports = {
+    plugins: ['abell-html-minifier'],
     sourcePath: 'theme',
     destinationPath: 'dist',
     contentPath: 'content',
